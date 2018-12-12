@@ -22,3 +22,24 @@ function isBalanced(s, caps) {
   return counter === 0 
   }
 
+//Best Practice
+
+function isBalanced(s, caps) {
+  
+  var i, stack = [];
+
+  for (var c of s) {
+    i = caps.indexOf(c);
+
+    if (i === -1)
+      continue;
+
+    else if (stack.length && stack[0] === caps.lastIndexOf(c) - 1)
+      stack.shift();
+      
+    else
+      stack.unshift(i);
+  }
+  
+  return !stack.length;
+}
