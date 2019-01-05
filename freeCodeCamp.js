@@ -30,3 +30,15 @@ function diffArray(arr1, arr2) {
   // Same, same; but different.
   return newArr;
 }
+
+//Number 3
+
+function destroyer(arr) {
+  let args = [...arguments]
+  args.shift()
+  return arr.filter((x)=>{
+    return args.indexOf(x) === -1
+  });
+}
+
+//Number 4
