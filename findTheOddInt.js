@@ -17,3 +17,5 @@ function findOdd(A) {
 }
 
 //Best Practice
+
+const findOdd = (xs) => xs.reduce((a, b) => a ^ b);
